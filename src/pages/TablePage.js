@@ -5,6 +5,10 @@ import { Table, Container, Row, Col, Button, Form, InputGroup, Navbar, Nav } fro
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import '../css/TablePage.css';
+import Footer from './Footer';
+import { MdDeleteForever } from "react-icons/md"
+import { RiPencilFill } from "react-icons/ri"
+// import '../css/Table.css';
 
 
 function TablePage() {
@@ -55,134 +59,464 @@ function TablePage() {
       {/* ------------------------------------------------ */}
 
 
-      <div className='page vertically-center'>
-        <div className="container table-top-section">
 
-          {/* ------------------------------------------------ */}
-          {/* ---------- ####### TABLE START #######---------- */}
-          {/* ------------------------------------------------ */}
-          <div className="table-responsive table-edit">
-            <Table striped size="sm" className="table table-bordered">
-              <thead>
-                <tr className="text-center p-2">
-                  <th>#</th>
-                  <th>Name</th>
-                  <th>Description</th>
-                  <th>Quantity</th>
-                </tr>
-              </thead>
-              <tbody>
+      {/* ------------------------------------------------ */}
+      {/* ---------- ####### TABLE START #######---------- */}
+      {/* ------------------------------------------------ */}
+      <div className='content'>
 
-                <tr className="text-center p-2" >
-                  <td>1</td>
-                  <td>ES344 Drill</td>
-                  <td>Power Electric Drill</td>
-                  <td>15</td>
-                  <td>
-                    <Button variant="danger" className="delete-edit">
-                      Delete
-                    </Button>
-                    <Button variant="secondary" onClick={(e) => { handleOpen(); }}>
-                      Update
-                    </Button>
+        <h1 className='table-name'>
+          <span>Table Name</span>
+        </h1>
+        <h2 className='table-info'>
+          Include a brief table description in the section here.
+        </h2>
 
-                    {/* -------------------------------------------------------- */}
-                    {/* ---------- ####### MODAL SECTION START #######---------- */}
-                    {/* -------------------------------------------------------- */}
-                    <Modal
-                      open={open}
-                      onClose={handleClose}
-                      aria-labelledby="modal-modal-title"
-                      aria-describedby="modal-modal-description"
-                    >
-                      <Box sx={style}>
+        <table className="table-container">
+          <thead className='table-column'>
+            <tr>
+              <th><h1>Column 1</h1></th>
+              <th><h1>Column 2</h1></th>
+              <th><h1>Column 3</h1></th>
+              <th><h1>Column 4</h1></th>
+              <th><h1>Column 5</h1></th>
+              <th><h1>Column 6</h1></th>
+              <th><h1>Column 7</h1></th>
+              <th><h1>Column 8</h1></th>
+              <th><h1>Column 9</h1></th>
+              <th><h1>Column 10</h1></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className='text-center'>
+              <td>Row Name</td>
+              <td>Row 1</td>
+              <td>Row 2</td>
+              <td>Row 3</td>
+              <td>Row 4</td>
+              <td>Row 5</td>
+              <td>Row 6</td>
+              <td>Row 7</td>
+              <td>Row 8</td>
+              <td>
+                <Button className="delete-edit">
+                  <MdDeleteForever />
+                </Button>
+                <Button variant="secondary" className="update-edit" onClick={(e) => { handleOpen(); }}>
+                  <RiPencilFill />
+                </Button>
 
-                        <Container className="table-modal-container">
+                {/* -------------------------------------------------------- */}
+                {/* ---------- ####### MODAL SECTION START #######---------- */}
+                {/* -------------------------------------------------------- */}
+                <Modal
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
+                >
+                  <Box sx={style}>
 
-                          {/* ------------------------------------------------------ */}
-                          {/* ---------- ####### UPDATE FORM START #######---------- */}
-                          {/* ------------------------------------------------------ */}
-                          <Form className='rounded p-4 p-sm-4 border table-modal-form'>
-                            <h1 className='font-weight-bold text-center pb-4 update-form-title'>
-                              UPDATE FORM
-                            </h1>
+                    <Container className="table-modal-container">
 
-                            {/* ------------- Update Form START -------------*/}
+                      {/* ------------------------------------------------------ */}
+                      {/* ---------- ####### UPDATE FORM START #######---------- */}
+                      {/* ------------------------------------------------------ */}
+                      <Form className='rounded p-4 p-sm-4 border table-modal-form'>
+                        <h1 className='font-weight-bold text-center pb-4 update-form-title'>
+                          UPDATE FORM
+                        </h1>
 
-                            <Row>
-                              <Col>
-                                <Form.Group className="mb-4" controlId="formProductName">
-                                  <Form.Label>Product Name</Form.Label>
-                                  <InputGroup>
-                                    <Form.Control
-                                      type="text"
-                                      placeholder="Product Name"
-                                      value="ES344 Drill"
-                                    />
-                                  </InputGroup>
-                                </Form.Group>
-                              </Col>
-                            </Row>
+                        {/* ------------- Update Form START -------------*/}
 
-                            <Row>
-                              <Col>
-                                <Form.Group className="mb-4" controlId="formProductDesc">
-                                  <Form.Label>Description</Form.Label>
-                                  <InputGroup>
-                                    <Form.Control
-                                      type="text"
-                                      placeholder="Description"
-                                      value="Power Electric Drill"
-                                    />
-                                  </InputGroup>
-                                </Form.Group>
-                              </Col>
-                              <Col>
-                                <Form.Group className="mb-4" controlId="formProductQuantity">
-                                  <Form.Label>Quantity</Form.Label>
-                                  <InputGroup>
-                                    <Form.Control
-                                      type="number"
-                                      placeholder="Quantity"
-                                      value="15"
-                                    />
-                                  </InputGroup>
-                                </Form.Group>
-                              </Col>
-                            </Row>
+                        <Row>
+                          <Col>
+                            <Form.Group className="mb-4" controlId="formProductName">
+                              <Form.Label>Product Name</Form.Label>
+                              <InputGroup>
+                                <Form.Control
+                                  type="text"
+                                  placeholder="Product Name"
+                                  value="ES344 Drill"
+                                />
+                              </InputGroup>
+                            </Form.Group>
+                          </Col>
+                        </Row>
 
-                            {/* ------------- Update Form END ------------- */}
+                        <Row>
+                          <Col>
+                            <Form.Group className="mb-4" controlId="formProductDesc">
+                              <Form.Label>Description</Form.Label>
+                              <InputGroup>
+                                <Form.Control
+                                  type="text"
+                                  placeholder="Description"
+                                  value="Power Electric Drill"
+                                />
+                              </InputGroup>
+                            </Form.Group>
+                          </Col>
+                          <Col>
+                            <Form.Group className="mb-4" controlId="formProductQuantity">
+                              <Form.Label>Quantity</Form.Label>
+                              <InputGroup>
+                                <Form.Control
+                                  type="number"
+                                  placeholder="Quantity"
+                                  value="15"
+                                />
+                              </InputGroup>
+                            </Form.Group>
+                          </Col>
+                        </Row>
 
-                            <div className="d-grid gap-2">
-                              <Button className="insert-btn" variant="primary" type="button" onClick={(e) => { handleClose(); }} >
-                                Update
-                              </Button>
-                            </div>
-                          </Form>
-                          {/* ---------------------------------------------------- */}
-                          {/* ---------- ####### UPDATE FORM END #######---------- */}
-                          {/* ---------------------------------------------------- */}
+                        {/* ------------- Update Form END ------------- */}
 
-                        </Container>
+                        <div className="d-grid gap-2">
+                          <Button className="insert-btn" variant="primary" type="button" onClick={(e) => { handleClose(); }} >
+                            Update
+                          </Button>
+                        </div>
+                      </Form>
+                      {/* ---------------------------------------------------- */}
+                      {/* ---------- ####### UPDATE FORM END #######---------- */}
+                      {/* ---------------------------------------------------- */}
 
-                      </Box>
-                    </Modal>
-                    {/* ------------------------------------------------------ */}
-                    {/* ---------- ####### MODAL SECTION END #######---------- */}
-                    {/* ------------------------------------------------------ */}
+                    </Container>
 
-                  </td>
-                </tr>
+                  </Box>
+                </Modal>
+                {/* ------------------------------------------------------ */}
+                {/* ---------- ####### MODAL SECTION END #######---------- */}
+                {/* ------------------------------------------------------ */}
 
-              </tbody>
-            </Table>
-          </div>
-          {/* ---------------------------------------------- */}
-          {/* ---------- ####### TABLE END #######---------- */}
-          {/* ---------------------------------------------- */}
+              </td>
+            </tr>
+            <tr className='text-center'>
+              <td>Row Name</td>
+              <td>Row 1</td>
+              <td>Row 2</td>
+              <td>Row 3</td>
+              <td>Row 4</td>
+              <td>Row 5</td>
+              <td>Row 6</td>
+              <td>Row 7</td>
+              <td>Row 8</td>
+              <td>
+                <Button className="delete-edit">
+                  <MdDeleteForever />
+                </Button>
+                <Button variant="secondary" className="update-edit" onClick={(e) => { handleOpen(); }}>
+                  <RiPencilFill />
+                </Button>
 
-        </div>
+                {/* -------------------------------------------------------- */}
+                {/* ---------- ####### MODAL SECTION START #######---------- */}
+                {/* -------------------------------------------------------- */}
+                <Modal
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
+                >
+                  <Box sx={style}>
+
+                    <Container className="table-modal-container">
+
+                      {/* ------------------------------------------------------ */}
+                      {/* ---------- ####### UPDATE FORM START #######---------- */}
+                      {/* ------------------------------------------------------ */}
+                      <Form className='rounded p-4 p-sm-4 border table-modal-form'>
+                        <h1 className='font-weight-bold text-center pb-4 update-form-title'>
+                          UPDATE FORM
+                        </h1>
+
+                        {/* ------------- Update Form START -------------*/}
+
+                        <Row>
+                          <Col>
+                            <Form.Group className="mb-4" controlId="formProductName">
+                              <Form.Label>Product Name</Form.Label>
+                              <InputGroup>
+                                <Form.Control
+                                  type="text"
+                                  placeholder="Product Name"
+                                  value="ES344 Drill"
+                                />
+                              </InputGroup>
+                            </Form.Group>
+                          </Col>
+                        </Row>
+
+                        <Row>
+                          <Col>
+                            <Form.Group className="mb-4" controlId="formProductDesc">
+                              <Form.Label>Description</Form.Label>
+                              <InputGroup>
+                                <Form.Control
+                                  type="text"
+                                  placeholder="Description"
+                                  value="Power Electric Drill"
+                                />
+                              </InputGroup>
+                            </Form.Group>
+                          </Col>
+                          <Col>
+                            <Form.Group className="mb-4" controlId="formProductQuantity">
+                              <Form.Label>Quantity</Form.Label>
+                              <InputGroup>
+                                <Form.Control
+                                  type="number"
+                                  placeholder="Quantity"
+                                  value="15"
+                                />
+                              </InputGroup>
+                            </Form.Group>
+                          </Col>
+                        </Row>
+
+                        {/* ------------- Update Form END ------------- */}
+
+                        <div className="d-grid gap-2">
+                          <Button className="insert-btn" variant="primary" type="button" onClick={(e) => { handleClose(); }} >
+                            Update
+                          </Button>
+                        </div>
+                      </Form>
+                      {/* ---------------------------------------------------- */}
+                      {/* ---------- ####### UPDATE FORM END #######---------- */}
+                      {/* ---------------------------------------------------- */}
+
+                    </Container>
+
+                  </Box>
+                </Modal>
+                {/* ------------------------------------------------------ */}
+                {/* ---------- ####### MODAL SECTION END #######---------- */}
+                {/* ------------------------------------------------------ */}
+
+              </td>
+            </tr>
+            <tr className='text-center'>
+              <td>Row Name</td>
+              <td>Row 1</td>
+              <td>Row 2</td>
+              <td>Row 3</td>
+              <td>Row 4</td>
+              <td>Row 5</td>
+              <td>Row 6</td>
+              <td>Row 7</td>
+              <td>Row 8</td>
+              <td>
+                <Button className="delete-edit">
+                  <MdDeleteForever />
+                </Button>
+                <Button variant="secondary" className="update-edit" onClick={(e) => { handleOpen(); }}>
+                  <RiPencilFill />
+                </Button>
+
+                {/* -------------------------------------------------------- */}
+                {/* ---------- ####### MODAL SECTION START #######---------- */}
+                {/* -------------------------------------------------------- */}
+                <Modal
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
+                >
+                  <Box sx={style}>
+
+                    <Container className="table-modal-container">
+
+                      {/* ------------------------------------------------------ */}
+                      {/* ---------- ####### UPDATE FORM START #######---------- */}
+                      {/* ------------------------------------------------------ */}
+                      <Form className='rounded p-4 p-sm-4 border table-modal-form'>
+                        <h1 className='font-weight-bold text-center pb-4 update-form-title'>
+                          UPDATE FORM
+                        </h1>
+
+                        {/* ------------- Update Form START -------------*/}
+
+                        <Row>
+                          <Col>
+                            <Form.Group className="mb-4" controlId="formProductName">
+                              <Form.Label>Product Name</Form.Label>
+                              <InputGroup>
+                                <Form.Control
+                                  type="text"
+                                  placeholder="Product Name"
+                                  value="ES344 Drill"
+                                />
+                              </InputGroup>
+                            </Form.Group>
+                          </Col>
+                        </Row>
+
+                        <Row>
+                          <Col>
+                            <Form.Group className="mb-4" controlId="formProductDesc">
+                              <Form.Label>Description</Form.Label>
+                              <InputGroup>
+                                <Form.Control
+                                  type="text"
+                                  placeholder="Description"
+                                  value="Power Electric Drill"
+                                />
+                              </InputGroup>
+                            </Form.Group>
+                          </Col>
+                          <Col>
+                            <Form.Group className="mb-4" controlId="formProductQuantity">
+                              <Form.Label>Quantity</Form.Label>
+                              <InputGroup>
+                                <Form.Control
+                                  type="number"
+                                  placeholder="Quantity"
+                                  value="15"
+                                />
+                              </InputGroup>
+                            </Form.Group>
+                          </Col>
+                        </Row>
+
+                        {/* ------------- Update Form END ------------- */}
+
+                        <div className="d-grid gap-2">
+                          <Button className="insert-btn" variant="primary" type="button" onClick={(e) => { handleClose(); }} >
+                            Update
+                          </Button>
+                        </div>
+                      </Form>
+                      {/* ---------------------------------------------------- */}
+                      {/* ---------- ####### UPDATE FORM END #######---------- */}
+                      {/* ---------------------------------------------------- */}
+
+                    </Container>
+
+                  </Box>
+                </Modal>
+                {/* ------------------------------------------------------ */}
+                {/* ---------- ####### MODAL SECTION END #######---------- */}
+                {/* ------------------------------------------------------ */}
+
+              </td>
+            </tr>
+            <tr className='text-center'>
+              <td>Row Name</td>
+              <td>Row 1</td>
+              <td>Row 2</td>
+              <td>Row 3</td>
+              <td>Row 4</td>
+              <td>Row 5</td>
+              <td>Row 6</td>
+              <td>Row 7</td>
+              <td>Row 8</td>
+              <td>
+                <Button className="delete-edit">
+                  <MdDeleteForever />
+                </Button>
+                <Button variant="secondary" className="update-edit" onClick={(e) => { handleOpen(); }}>
+                  <RiPencilFill />
+                </Button>
+
+                {/* -------------------------------------------------------- */}
+                {/* ---------- ####### MODAL SECTION START #######---------- */}
+                {/* -------------------------------------------------------- */}
+                <Modal
+                  open={open}
+                  onClose={handleClose}
+                  aria-labelledby="modal-modal-title"
+                  aria-describedby="modal-modal-description"
+                >
+                  <Box sx={style}>
+
+                    <Container className="table-modal-container">
+
+                      {/* ------------------------------------------------------ */}
+                      {/* ---------- ####### UPDATE FORM START #######---------- */}
+                      {/* ------------------------------------------------------ */}
+                      <Form className='rounded p-4 p-sm-4 border table-modal-form'>
+                        <h1 className='font-weight-bold text-center pb-4 update-form-title'>
+                          UPDATE FORM
+                        </h1>
+
+                        {/* ------------- Update Form START -------------*/}
+
+                        <Row>
+                          <Col>
+                            <Form.Group className="mb-4" controlId="formProductName">
+                              <Form.Label>Product Name</Form.Label>
+                              <InputGroup>
+                                <Form.Control
+                                  type="text"
+                                  placeholder="Product Name"
+                                  value="ES344 Drill"
+                                />
+                              </InputGroup>
+                            </Form.Group>
+                          </Col>
+                        </Row>
+
+                        <Row>
+                          <Col>
+                            <Form.Group className="mb-4" controlId="formProductDesc">
+                              <Form.Label>Description</Form.Label>
+                              <InputGroup>
+                                <Form.Control
+                                  type="text"
+                                  placeholder="Description"
+                                  value="Power Electric Drill"
+                                />
+                              </InputGroup>
+                            </Form.Group>
+                          </Col>
+                          <Col>
+                            <Form.Group className="mb-4" controlId="formProductQuantity">
+                              <Form.Label>Quantity</Form.Label>
+                              <InputGroup>
+                                <Form.Control
+                                  type="number"
+                                  placeholder="Quantity"
+                                  value="15"
+                                />
+                              </InputGroup>
+                            </Form.Group>
+                          </Col>
+                        </Row>
+
+                        {/* ------------- Update Form END ------------- */}
+
+                        <div className="d-grid gap-2">
+                          <Button className="insert-btn" variant="primary" type="button" onClick={(e) => { handleClose(); }} >
+                            Update
+                          </Button>
+                        </div>
+                      </Form>
+                      {/* ---------------------------------------------------- */}
+                      {/* ---------- ####### UPDATE FORM END #######---------- */}
+                      {/* ---------------------------------------------------- */}
+
+                    </Container>
+
+                  </Box>
+                </Modal>
+                {/* ------------------------------------------------------ */}
+                {/* ---------- ####### MODAL SECTION END #######---------- */}
+                {/* ------------------------------------------------------ */}
+
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div >
+      {/* ---------------------------------------------- */}
+      {/* ---------- ####### TABLE END #######---------- */}
+      {/* ---------------------------------------------- */}
+
+      <Footer />
+
     </div>
 
 
