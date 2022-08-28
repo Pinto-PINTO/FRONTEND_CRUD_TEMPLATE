@@ -1,7 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaFacebookF, FaTwitter, FaYoutube } from "react-icons/fa"
-
 import '../css/Footer.css'
 
 function Footer() {

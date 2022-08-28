@@ -9,7 +9,7 @@ import Footer from './Footer';
 function FormPage() {
   return (
 
-    <div>
+    <div className='entire-form-section'>
 
       {/* -------------------------------------------------- */}
       {/* ---------- ####### NAV BAR START #######---------- */}
@@ -45,84 +45,84 @@ function FormPage() {
         </h2>
 
         <div className='form-center'>
-        {/* ----------------------------------------------- */}
-        {/* ---------- ####### FORM START #######---------- */}
-        {/* ----------------------------------------------- */}
-        <Form className='p-4 p-sm-4 filter-section filter-form'>
-          <Row>
-            <Col>
-              <Form.Group className="mb-4 form-field" controlId="formProductName">
-                <Form.Label>Name</Form.Label>
-                <InputGroup>
-                  <Form.Control
-                    type="text"
-                    placeholder="Product Name"
-                  />
-                </InputGroup>
-              </Form.Group>
-            </Col>
-          </Row>
+          {/* ----------------------------------------------- */}
+          {/* ---------- ####### FORM START #######---------- */}
+          {/* ----------------------------------------------- */}
+          <Form className='p-4 p-sm-4 filter-section filter-form'>
+            <Row>
+              <Col>
+                <Form.Group className="mb-4 form-field" controlId="formProductName">
+                  <Form.Label>Name</Form.Label>
+                  <InputGroup>
+                    <Form.Control
+                      type="text"
+                      placeholder="Product Name"
+                    />
+                  </InputGroup>
+                </Form.Group>
+              </Col>
+            </Row>
 
-          <Row>
-            <Col>
-              <Form.Group className="mb-4 form-field" controlId="formProductDesc">
-                <Form.Label>Description</Form.Label>
-                <InputGroup>
-                  <Form.Control
-                    type="text"
-                    placeholder="Description"
-                  />
-                </InputGroup>
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group className="mb-4 form-field" controlId="formProductQuantity">
-                <Form.Label>Quantity</Form.Label>
-                <InputGroup>
-                  <Form.Control
-                    type="number"
-                    placeholder="Quantity"
-                  />
-                </InputGroup>
-              </Form.Group>
-            </Col>
-          </Row>
+            <Row>
+              <Col>
+                <Form.Group className="mb-4 form-field" controlId="formProductDesc">
+                  <Form.Label>Description</Form.Label>
+                  <InputGroup>
+                    <Form.Control
+                      type="text"
+                      placeholder="Description"
+                    />
+                  </InputGroup>
+                </Form.Group>
+              </Col>
+              <Col>
+                <Form.Group className="mb-4 form-field" controlId="formProductQuantity">
+                  <Form.Label>Quantity</Form.Label>
+                  <InputGroup>
+                    <Form.Control
+                      type="number"
+                      placeholder="Quantity"
+                    />
+                  </InputGroup>
+                </Form.Group>
+              </Col>
+            </Row>
 
-          <Row>
-            <Col>
-              <Form.Group className="mb-4 form-field" controlId="formProductStatus">
-                <Form.Label>Status</Form.Label>
-                <InputGroup>
-                  <Form.Control
-                    type="text"
-                    placeholder="Status"
-                  />
-                </InputGroup>
-              </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group className="mb-4 form-field" controlId="formProductDate">
-                <Form.Label>Date</Form.Label>
-                <InputGroup>
-                  <Form.Control
-                    type="number"
-                    placeholder="Date"
-                  />
-                </InputGroup>
-              </Form.Group>
-            </Col>
-          </Row>
+            <Row>
+              <Col>
+                <Form.Group className="mb-4 form-field" controlId="formProductStatus">
+                  <Form.Label>Status</Form.Label>
+                  <InputGroup>
+                    <Form.Control
+                      type="text"
+                      placeholder="Status"
+                    />
+                  </InputGroup>
+                </Form.Group>
+              </Col>
+              <Col>
+                <Form.Group className="mb-4 form-field" controlId="formProductDate">
+                  <Form.Label>Date</Form.Label>
+                  <InputGroup>
+                    <Form.Control
+                      type="number"
+                      placeholder="Date"
+                    />
+                  </InputGroup>
+                </Form.Group>
+              </Col>
+            </Row>
 
-          <div className="d-grid gap-2">
-            <Button variant="success" type="Submit" className="filter-btn">
-              Insert
-            </Button>
-          </div>
+            <div className="d-grid gap-2">
+              <Button variant="success" type="Submit" className="filter-btn">
+                Insert
+              </Button>
+            </div>
 
-        </Form>
-        {/* --------------------------------------------- */}
-        {/* ---------- ####### FORM END #######---------- */}
-        {/* --------------------------------------------- */}
+          </Form>
+          {/* --------------------------------------------- */}
+          {/* ---------- ####### FORM END #######---------- */}
+          {/* --------------------------------------------- */}
         </div>
       </div>
 
