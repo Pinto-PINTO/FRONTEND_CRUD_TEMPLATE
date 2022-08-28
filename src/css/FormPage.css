@@ -23,8 +23,8 @@
 }
 
 .filter-btn {
-  background: #37445d !important;
-  border: #37445d !important;
+  background: #0f0e0e !important;
+  border: #0f0e0e !important;
   transition: all 0.5s ease-in-out !important;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -37,7 +37,7 @@
 }
 
 .form-field {
-  color: #234574;
+  color: #0f0e0e;
   font-weight: 500;
 }
 

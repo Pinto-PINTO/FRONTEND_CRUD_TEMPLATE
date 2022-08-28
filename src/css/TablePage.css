@@ -63,16 +63,16 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   line-height: 1.42em;
-  color: #a7a1ae;
+  color: #0f0e0e;
   /* background-color: #1f2739; */
-  background-color: #777b81;
+  background-color: #fdfdfd ;
   height: 100vh;
   overflow: hidden;
 }
 
 .table-name {
   margin-top: 70px;
-  color: #e2e2e2;
+  color: #0f0e0e;
   font-size: 3em;
   font-weight: 300;
   line-height: 1em;
@@ -84,7 +84,7 @@
 .table-info {
   padding-bottom: 60px !important;
   padding-top: 10px;
-  color: rgb(185, 186, 187);
+  color: #0f0e0e;
   font-size: 1em;
   font-weight: 300;
   text-align: center;
@@ -99,7 +99,7 @@
   font-weight: bold;
   font-size: 1em;
   text-align: center;
-  color: #5e7e97; 
+  color: #d5d6d1; 
 }
 
 .table-container th {
@@ -138,20 +138,20 @@
 
 /* Background-color of the odd rows */
 .table-container tr:nth-child(odd) {
-  background-color: #3a3c46;
+  background-color: #d5d6d1;
 }
 
 /* Background-color of the even rows */
 .table-container tr:nth-child(even) {
-  background-color: #525b6e;
+  background-color: #555654;
 }
 
 .table-container th {
-  background-color: #1e2128;
+  background-color: #0f0e0e;
 }
 
 .table-container td:first-child {
-  color: #b3b3b3;
+  color: #0f0e0e;
 }
 
 /* .table-container tr:hover {
@@ -164,25 +164,25 @@
 .delete-edit {
   margin-right: 10px;
   color: white;
-  background-color: #b51e1e;
-  border: #b51e1e ;
+  background-color: #621017;
+  border: #621017 ;
 }
 
 .delete-edit:hover {
-  background-color: #d12929;
-  border: #d12929 ;
+  background-color: rgb(181, 5, 23);
+  border: rgb(181, 5, 23) ;
 }
 
 .update-edit {
   color: white;
-  background-color: #0da048;
-  border: #455e72 ;
+  background-color: #124c20;
+  border: #124c20 ;
 }
 
 .update-edit:hover {
   color: white;
-  background-color: #17be5a;
-  border: #17be5a ;
+  background-color: #1a6f2e;
+  border: #1a6f2e ;
 }
 
 
