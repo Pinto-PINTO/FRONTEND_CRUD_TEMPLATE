@@ -154,12 +154,12 @@
   color: #b3b3b3;
 }
 
-.table-container tr:hover {
+/* .table-container tr:hover {
   background-color: #5a758a;
   -webkit-box-shadow: 0 6px 6px -6px #0e1119;
   -moz-box-shadow: 0 6px 6px -6px #0e1119;
   box-shadow: 0 6px 6px -6px #0e1119;
-}
+} */
 
 .delete-edit {
   margin-right: 10px;
